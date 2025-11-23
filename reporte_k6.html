@@ -1,0 +1,220 @@
+
+  <html>
+  <head>
+    <title>Reporte de Pruebas k6</title>
+    <style>
+      body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+      h1 { color: #222; }
+      h2 { color: #444; }
+      .box { background: white; padding: 15px; margin-bottom: 20px; border-radius: 8px;
+             box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+      pre { background: #eee; padding: 10px; border-radius: 5px; }
+    </style>
+  </head>
+  <body>
+
+    <h1>📊 Reporte de Pruebas de Carga – k6</h1>
+
+    <div class="box">
+      <h2>📌 Resumen General</h2>
+      <pre>{
+  "name": "",
+  "path": "",
+  "id": "d41d8cd98f00b204e9800998ecf8427e",
+  "groups": [],
+  "checks": []
+}</pre>
+    </div>
+
+    <div class="box">
+      <h2>📈 Métricas</h2>
+      <pre>{
+  "data_received": {
+    "type": "counter",
+    "contains": "data",
+    "values": {
+      "count": 402248,
+      "rate": 38435.993108681214
+    }
+  },
+  "http_req_duration": {
+    "type": "trend",
+    "contains": "time",
+    "values": {
+      "min": 2.9533,
+      "med": 81.1589,
+      "max": 111.5752,
+      "p(90)": 89.61636,
+      "p(95)": 94.063055,
+      "avg": 50.403425555555586
+    }
+  },
+  "iterations": {
+    "values": {
+      "count": 90,
+      "rate": 8.599767754672017
+    },
+    "type": "counter",
+    "contains": "default"
+  },
+  "http_req_failed": {
+    "contains": "default",
+    "values": {
+      "rate": 0,
+      "passes": 0,
+      "fails": 180
+    },
+    "type": "rate"
+  },
+  "http_req_blocked": {
+    "values": {
+      "avg": 26.77265277777778,
+      "min": 0,
+      "med": 0,
+      "max": 321.0845,
+      "p(90)": 203.34799999999993,
+      "p(95)": 227.6774
+    },
+    "type": "trend",
+    "contains": "time"
+  },
+  "iteration_duration": {
+    "type": "trend",
+    "contains": "time",
+    "values": {
+      "p(90)": 1650.5041,
+      "p(95)": 1650.917,
+      "avg": 1157.0837733333333,
+      "min": 1082.6835,
+      "med": 1094.5902,
+      "max": 1652.458
+    }
+  },
+  "http_req_connecting": {
+    "type": "trend",
+    "contains": "time",
+    "values": {
+      "min": 0,
+      "med": 0,
+      "max": 92.4592,
+      "p(90)": 6.1453,
+      "p(95)": 81.98553999999997,
+      "avg": 5.160961111111111
+    }
+  },
+  "http_req_sending": {
+    "contains": "time",
+    "values": {
+      "avg": 0.049425,
+      "min": 0,
+      "med": 0,
+      "max": 1.5139,
+      "p(90)": 0.031429999999998216,
+      "p(95)": 0.4028299999999998
+    },
+    "type": "trend"
+  },
+  "http_reqs": {
+    "values": {
+      "count": 180,
+      "rate": 17.199535509344035
+    },
+    "type": "counter",
+    "contains": "default"
+  },
+  "http_req_duration{expected_response:true}": {
+    "type": "trend",
+    "contains": "time",
+    "values": {
+      "max": 111.5752,
+      "p(90)": 89.61636,
+      "p(95)": 94.063055,
+      "avg": 50.403425555555586,
+      "min": 2.9533,
+      "med": 81.1589
+    }
+  },
+  "http_req_receiving": {
+    "type": "trend",
+    "contains": "time",
+    "values": {
+      "avg": 0.8853977777777776,
+      "min": 0,
+      "med": 0,
+      "max": 13.2712,
+      "p(90)": 3.2176899999999997,
+      "p(95)": 4.271629999999996
+    }
+  },
+  "http_req_tls_handshaking": {
+    "type": "trend",
+    "contains": "time",
+    "values": {
+      "min": 0,
+      "med": 0,
+      "max": 93.8042,
+      "p(90)": 29.3942,
+      "p(95)": 83.14297999999998,
+      "avg": 6.535806666666668
+    }
+  },
+  "http_req_waiting": {
+    "type": "trend",
+    "contains": "time",
+    "values": {
+      "avg": 49.46860277777779,
+      "min": 2.2262,
+      "med": 78.34995,
+      "max": 111.5752,
+      "p(90)": 88.73586,
+      "p(95)": 90.95631999999999
+    }
+  },
+  "vus_max": {
+    "type": "gauge",
+    "contains": "default",
+    "values": {
+      "value": 10,
+      "min": 10,
+      "max": 10
+    }
+  },
+  "data_sent": {
+    "type": "counter",
+    "contains": "data",
+    "values": {
+      "count": 18450,
+      "rate": 1762.9523897077636
+    }
+  },
+  "vus": {
+    "type": "gauge",
+    "contains": "default",
+    "values": {
+      "value": 10,
+      "min": 10,
+      "max": 10
+    }
+  }
+}</pre>
+    </div>
+
+    <div class="box">
+      <h2>📝 Información de la prueba</h2>
+      <ul>
+        <li><b>Usuarios simultáneos:</b> 10</li>
+        <li><b>Duración:</b> 10s</li>
+        <li><b>Endpoint probado:</b> https://test.k6.io/</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h2>💡 Interpretación básica</h2>
+      <p>Este reporte fue generado automáticamente por k6. Incluye métricas clave como tiempos de respuesta,
+      número de solicitudes exitosas, errores, percentiles de latencia y más. Este archivo HTML es ideal para
+      ser incluido como evidencia en informes o actividades académicas.</p>
+    </div>
+
+  </body>
+  </html>
+  
