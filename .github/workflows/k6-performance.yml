@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Checkout del repositorio
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4   # actualizado
 
     - name: Instalar k6
       run: |
@@ -29,14 +29,13 @@ jobs:
         k6 run test-carga.js --out json=resultado.json
 
     - name: Guardar resultados como artefacto
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4   # actualizado
       with:
         name: resultados-k6
         path: resultado.json
 
     - name: Subir reporte HTML como artefacto
-      if: success()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4   # actualizado
       with:
         name: reporte-html
         path: reporte_k6.html
